@@ -4,7 +4,7 @@ import { Text, View, StyleSheet, TextInput, TouchableOpacity } from 'react-nativ
 
 import { useForm, Controller } from 'react-hook-form';
 
-function Cadastro() {
+function Cadastro({navigation}) {
   const { control, handleSubmit, formState: { errors } } = useForm ({})
 
 
@@ -65,7 +65,9 @@ function Cadastro() {
         )}
     />
 
-    <TouchableOpacity style={styles.button}>
+    <TouchableOpacity style={styles.button}
+    onPress={() => navigation.navigate("Fornecedores")}
+    >
       <Text style={styles.buttonText}>Enviar</Text>
     </TouchableOpacity>
   </View>
