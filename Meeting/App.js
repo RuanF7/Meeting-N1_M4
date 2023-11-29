@@ -2,7 +2,7 @@ import Cadastro from './screens/Cadastro';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Fornecedores from './screens/Fornecedores';
-import { Button, Icon } from '@rneui/base';
+import { Button, Icon } from '@rneui/base'  ;
 
 
 const Stack = createNativeStackNavigator();

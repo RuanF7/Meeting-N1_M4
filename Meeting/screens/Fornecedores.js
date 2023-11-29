@@ -1,29 +1,42 @@
 import React, { useState } from 'react'
 
-import { Text, View, StyleSheet, TouchableOpacity, FlatList } from 'react-native';
+import { View, StyleSheet, TouchableOpacity, FlatList } from 'react-native';
 
 import { MaterialIcons } from "@expo/vector-icons"
-import Usuarios from '../data/Usuarios';
-import { ListItem } from '@rneui/base';
+import usuarios from '../data/usuarios';
+import { ListItem, Avatar } from '@rneui/themed';
 
 export default props => {
 
-    function Fornecedores({item: Usuarios}) {
+    function Fornecedores({ item: usuario }) {
       return (
-        <ListItem
-          leftAvatar={{source: {url: Usuarios.avatarURL}}}
-        />
+        <ListItem 
+        style={styles.list}
+        key={usuario.id} 
+        bottomDivider
+        onPress={() => props.navigation.navigate('Cadastro')}
+        >          
+          <Avatar 
+            rounded 
+            source={{uri: usuario.avatar_url}} />
+          <ListItem.Content>
+            <ListItem.Title>{usuario.name}</ListItem.Title>
+            <ListItem.Subtitle>{usuario.adress}</ListItem.Subtitle>
+            <ListItem.Subtitle>{usuario.contact}</ListItem.Subtitle>
+            <ListItem.Subtitle>{usuario.category}</ListItem.Subtitle>
+          </ListItem.Content>
+        </ListItem>
+        
       )
     }  
       return (
         <View style={styles.container}>
-          <Text style={styles.cadastro}>Fornecedores</Text>
-          <FlatList
-            style={styles.list}
-            data={Usuarios}
-            keyExtractor={Usuarios => Usuarios.name.toString()}
+           <FlatList            
+            data={usuarios}
+            keyExtractor={usuario => usuario.id.toString()}
             showsVerticalScrollIndicator={false}
-            renderItem={ Fornecedores } />
+            renderItem={ Fornecedores }
+          />
         </View>
       )
     }
@@ -62,7 +75,7 @@ export default props => {
         fontSize: 18,
       },
       list: {
-        color: '#1DB954',
+       
       }
     });
     

@@ -10,7 +10,6 @@ function Cadastro({navigation}) {
 
   return (
   <View style={styles.container}>
-    <Text style={styles.cadastro}>Cadastro</Text>
     <StatusBar style="light" />
     <Controller
         control={control}

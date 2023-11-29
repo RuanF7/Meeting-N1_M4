@@ -5,7 +5,7 @@ export default [
     adress: 'Rua Petrópolis, 81',
     contact: 'ambev@email.com',
     category: 'Bebidas alcoolicas',
-    avatarUrl: 
+    avatar_url: 
       'https://logospng.org/wp-content/uploads/ambev.jpg',
   },
   {
@@ -14,7 +14,7 @@ export default [
     adress: 'Rua Teresópolis, 82',
     contact: 'pepsico@email.com',
     category: 'Bebidas não-alcoolicas',
-    avatarUrl: 
+    avatar_url: 
       'https://logospng.org/wp-content/uploads/pepsi.png',
   },
   {
@@ -23,7 +23,7 @@ export default [
     adress: 'Rua Santa Teresa, 83',
     contact: 'elmachips@email.com',
     category: 'Comida',
-    avatarUrl: 
+    avatar_url: 
       'https://logospng.org/wp-content/uploads/elma-chips.png',
   },
   {
@@ -32,9 +32,7 @@ export default [
     adress: 'Rua Búzios, 84',
     contact: 'dominos@email.com',
     category: 'Comida',
-    avatarUrl:
+    avatar_url:
       'https://logospng.org/wp-content/uploads/dominos-pizza.png',
   },
-]
-/*      
- */
+];
