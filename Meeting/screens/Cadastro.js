@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { StatusBar } from 'expo-status-bar';
 import { Text, View, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 
@@ -6,7 +6,7 @@ import { useForm, Controller } from 'react-hook-form';
 
 function Cadastro({navigation}) {
   const { control, handleSubmit, formState: { errors } } = useForm ({})
-
+  
 
   return (
   <View style={styles.container}>
@@ -107,8 +107,9 @@ const styles = StyleSheet.create({
   },
   buttonText:{
     fontWeight: 'bold',
-    fontsize: 18,
+    fontSize: 18,
   },
+  
 });
 
 export default Cadastro;
